@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Ty's Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solomontyk/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solomontyk/Portfolio/issues"
+  },
+  "homepage": "https://github.com/solomontyk/Portfolio#readme",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}

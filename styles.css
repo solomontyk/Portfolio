@@ -1,0 +1,30 @@
+body {
+    background-color: #dee4e9;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 50px;
+    font-size: 100px;
+    border: 2px solid #333; /* Border style, width, and color */
+    padding: 10px; /* Add padding around the content */
+}
+
+p {
+
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+button {
+    background-color: #104e66; /* Change this to the desired button color */
+    color: #ffffff; /* Text color */
+    border: none; /* Remove button border */
+    padding: 10px 20px; /* Adjust button padding */
+    cursor: pointer; /* Show pointer cursor on hover */
+    margin: 0 5px; /* Center the button horizontally */
+    border-radius: 10px;
+}
