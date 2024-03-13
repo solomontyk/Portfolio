@@ -1,57 +1,59 @@
 body {
-    /* background-color: #abc4b3; */
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    min-height: 100vh; /* Ensure the entire viewport height is covered */
-    margin: -100px; /* Remove default body margin */
-    flex-direction: row;
-    background-image: url(stacked-peaks-haikei.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: -100px;
+  flex-direction: row;
+  background-image: url(stacked-peaks-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
-    margin-left: 50px;
-    padding-left: 10%;
-    justify-content: space-around;
-    font-size: 30px;
-    
+  margin-left: 50%;
+  /* padding-left: ; */
+  justify-content: space-around;
+  font-size: 30px;
+  width: auto;
+  padding-right: 20%;
+  
 }
+
 .header-link {
-    display: flex;
-    flex-direction: column;
+  margin: 1%;
+  padding-left: 20%;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    margin: 50px;
-    font-size: 100px;
-    /* border: 2px solid #333; Border style, width, and color */
-    padding: 10px; /* Add padding around the content */
+  display: flex;
+  justify-content: center;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  margin: 50px;
+  font-size: 100px;
+  padding: 10px;
 }
 
 p {
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    display: flex;
-    justify-content: center;
-    margin-top: auto;
-    margin: 20px;
-    font-size: 23px;
-    justify-content: space-around;
-    font-weight: bold;
-    
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin: 20px;
+  font-size: 16px;
+  justify-content: space-around;
+  font-weight: bold;
 }
-img {
-    width: 300px; /* Set the width of the image */
-    height: auto; /* Maintain the aspect ratio */
-    display: block; /* Make the image a block-level element */
-    margin: 0 auto; /* Center the image horizontally */
-    border-radius: 10px;
 
+img {
+  width: 300px;
+  min-width: 50px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
 }
+
 .button-1, .button-2, .button-3 {
   appearance: none;
   background-color: transparent;
@@ -78,7 +80,7 @@ img {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 40;
+  width: 100%;
   will-change: transform;
 }
 
@@ -98,23 +100,18 @@ img {
   transform: translateY(0);
 }
 
-/* html {
-  --s: 50px;
-  --c: #191b22;
-  --_s: calc(2*var(--s)) calc(2*var(--s));
-  --_g: 35.36% 35.36% at;
-  --_c: #0000 66%,#20222a 68% 70%,#0000 72%;
-  background: 
-    radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s), 
-    radial-gradient(var(--_g) 0 75%,var(--_c)) var(--s) var(--s)/var(--_s), 
-    radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s), 
-    radial-gradient(var(--_g) 0 75%,var(--_c)) 0 0/var(--_s), 
-    repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
-    radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
-  background-attachment: fixed;
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  body {
+      flex-direction: row;
+  }
+  .container {
+      margin-left: 50px;
+  }
+  .button-1, .button-2, .button-3 {
+      width: auto;
+  }
 }
- */
-
 
 /* waves below  */
  /* // best seen at 1500px or less */
