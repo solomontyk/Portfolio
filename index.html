@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+
     <style>
         /* Existing CSS styles */
+        img {
+            max-width: 100%;
+            height: auto; /* Ensures the image maintains its aspect ratio */
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -39,6 +45,7 @@
         }
         main {
             padding: 20px;
+            margin: 2%; 
         }
         footer {
             background-color: #333;
@@ -64,16 +71,32 @@
         }
         section {
             display: none;
+            padding: 20px;
         }
         section.active {
-            display: block;
+            display: flex;
         }
+
+        .left-column {
+            flex: 1;
+            padding-right: 20%; /* Add padding to create space between columns */
+            
+        }
+
+        .right-column {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
     </style>
 </head>
+
 <body>
     <header>
         <h1>Ty Solomon</h1>
         <p>Full Stack Web Dev // Software Engineer</p>
+        <p>Lehi, Utah</p>
     </header>
 
     <nav>
@@ -84,18 +107,48 @@
 
     <main>
         <section id="about" class="active">
-            <h2>About Me</h2>
-            <p>This is information about me.</p>
+            <div class="left-column">
+                <h2>Hello!</h2>
+                <p>A seasoned Full Stack Web Developer and Front End Software Engineer in Lehi, UT, proficient in React.js, Redux, Node.js, Express, SQL, Docker, Python, and Git. Skilled in Agile project management, debugging, and deployment. Recent Graduate of the Full Stack Web Development Program at Bloom Institute of Technology.</p>
+            </div>
+            <div class="right-column">
+                <!-- Add your image here -->
+                <img src="Animation - 1713909866424.gif" alt="Animated GIF"style="max-width: 100%;">
+            </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <p>These are my projects.</p>
+            <div class="project">
+                <h3>Project Name 1</h3>
+                <p>Description of Project 1</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="projects">
+                <div class="left-column">
+                    <h3>Project Name 2</h3>
+                    <p>Description of Project 2</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <div class="right-column">
+                    <!-- Add your image or content here -->
+                    <img src="projects_image.jpg" alt="Projects Image" style="max-width: 100%;">
+                </div>
+            </div>
         </section>
 
         <section id="contact">
-            <h2>Contact Me</h2>
-            <p>You can contact me here.</p>
+            <div class="left-column">
+                <h2>Contact Me</h2>
+                <p>Socials</p>
+                <p>Email: solomontyk@gmail.com</p>
+                <p>Instagram: ty.sol</p>
+                <p></p>
+            </div>
+            <div class="right-column">
+                <!-- Add your image or content here -->
+                <img src="meee.jpg" alt="Contact Me Image" style="max-width: 40%;">
+            </div>
         </section>
     </main>
 
