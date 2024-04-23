@@ -1,38 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>solomontyk</title>
+    <title>My Portfolio</title>
+    <style>
+        /* Existing CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, main, footer {
+            display: block;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+        nav button {
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        nav button:hover {
+            background-color: #0056b3;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #544961;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #8a97a5;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <div class="header-link">
-    <h1>Ty Solomon</h1>
-    <a href="https://docs.google.com/document/d/11TT6y2bJZhbL4iDCGeofba_k7F0XiZrUBXNqdJOYNEo/edit" class="button-link">
-    <button class="button-1" role="button">Resume</button>
-    </a>
-    <a href="https://github.com/solomontyk" class="button-link">
-    <button class="button-2" role="button">GitHub</button>
-    </a>
-    <a href="https://www.linkedin.com/in/solomontyk/" class="button-link">
-    <button class="button-3" role="button">LinkedIn</button>
-    </a>
-</div>
-    <div class="container">
-    <p>I'm a Full Stack Web Dev and Front End Software Engineer.</p>
-    <p>Feel free to reach out and check out my socials!</p>
-    <img src="meee.jpg" alt="Example Image">
-</div>
-    <script src="script.js"></script>
-    <!-- waves below -->
-    <div class="ocean">
-        <div class="wave"></div>
-        <div class="wave"></div>
-      </div>
-    <!-- waves above -->
+    <header>
+        <h1>Ty Solomon</h1>
+        <p>Full Stack Web Dev // Software Engineer</p>
+    </header>
+
+    <nav>
+        <button onclick="showContent('about')" class="btn">About</button>
+        <button onclick="showContent('projects')" class="btn">Projects</button>
+        <button onclick="showContent('contact')" class="btn">Contact</button>
+    </nav>
+
+    <main>
+        <section id="about" class="active">
+            <h2>About Me</h2>
+            <p>This is information about me.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>These are my projects.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>You can contact me here.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 solomontyk</p>
+        <div>
+            <a href="https://www.linkedin.com/in/solomontyk/" class="btn" target="_blank">LinkedIn</a>
+            <a href="https://github.com/solomontyk" class="btn" target="_blank">GitHub</a>
+            <a href="resume.pdf" class="btn" download>Download Resume</a>
+        </div>
+    </footer>
+
+    <script>
+        function showContent(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('main section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
-
