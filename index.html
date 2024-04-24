@@ -21,13 +21,13 @@
             display: block;
         }
         header {
-            background-color: #333;
+            background-color: #3f3f3e;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
         nav {
-            background-color: #555;
+            background-color: #5a5c5e;
             padding: 10px;
             text-align: center;
         }
@@ -79,7 +79,8 @@
 
         .left-column {
             flex: 1;
-            padding-right: 20%; /* Add padding to create space between columns */
+            padding-right: 15%; /* Add padding to create space between columns */
+    
             
         }
 
@@ -89,6 +90,29 @@
             justify-content: center;
         }
         
+        #about p {
+            line-height: 2;
+        }
+
+        /* Apply animation to main content */
+        main {
+            animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        }
+
+        /* Define keyframes for animation */
+        @keyframes tracking-in-expand {
+            0% {
+                letter-spacing: -0.5em;
+                opacity: 0;
+            }
+            40% {
+                opacity: 0.6;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
     </style>
 </head>
 
@@ -109,37 +133,46 @@
         <section id="about" class="active">
             <div class="left-column">
                 <h2>Hello!</h2>
-                <p>A seasoned Full Stack Web Developer and Front End Software Engineer in Lehi, UT, proficient in React.js, Redux, Node.js, Express, SQL, Docker, Python, and Git. Skilled in Agile project management, debugging, and deployment. Recent Graduate of the Full Stack Web Development Program at Bloom Institute of Technology.</p>
+                <p>I'm a Full Stack Web Developer and Front End Software Engineer in Lehi, UT, proficient in React.js, Redux, Node.js, Express, SQL, Docker, Python, and Git. Skilled in Agile project management, debugging, and deployment. I am a recent Graduate of the Full Stack Web Development Program at Bloom Institute of Technology.</p>
+            <p>I'm currently expanding my skill set with Docker, Python, and C#, and I'm excited to explore their applications and contribute to innovative projects. Additionally, I'm seeking opportunities to collaborate on open source projects, where we can join forces to create impactful solutions and foster community-driven development.</p>
             </div>
             <div class="right-column">
                 <!-- Add your image here -->
-                <img src="Animation - 1713909866424.gif" alt="Animated GIF"style="max-width: 100%;">
+                <img src="laptop2.gif" alt="Animated GIF"style="max-width: 75%; max-height: 75%;">
             </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
             <div class="project">
-                <h3>Project Name 1</h3>
-                <p>Description of Project 1</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="projects">
-                <div class="left-column">
-                    <h3>Project Name 2</h3>
-                    <p>Description of Project 2</p>
+                <div class="project-info">
+                    <h3>Class Based Components</h3>
+                    <p>Description of Project 1</p>
                     <a href="#" class="btn">View Project</a>
                 </div>
-                <div class="right-column">
-                    <!-- Add your image or content here -->
-                    <img src="projects_image.jpg" alt="Projects Image" style="max-width: 100%;">
+            </div>
+            <div class="project">
+                <div class="project-info">
+                    <h3>asylum-rg-fe-starter</h3>
+                    <p> I Implemented Axios to this project to streamline API requests to improve data fetching efficiency.
+                        Also integrated a functional Auth0 microservice with Protected Routes using Javascript.
+                        </p>
+                    <a href="https://github.com/solomontyk/asylum-rg-fe-starter" class="btn">View Project</a>
                 </div>
             </div>
+            <div class="project">
+                <div class="project-info">
+                    <h3>Shopify project for a Honey website!</h3>
+                    <p>Currently developing a shopify website to sell Honey from a small marketplace located in Georgia.</p>
+                    <a href="https://github.com/solomontyk/LGHoney" class="btn">View Project</a>
+                </div>
+            </div>
+            <!-- Add more projects as needed -->
         </section>
 
         <section id="contact">
             <div class="left-column">
-                <h2>Contact Me</h2>
+                <h2>Feel free to reach out!</h2>
                 <p>Socials</p>
                 <p>Email: solomontyk@gmail.com</p>
                 <p>Instagram: ty.sol</p>
@@ -162,19 +195,25 @@
     </footer>
 
     <script>
-        function showContent(sectionId) {
-            // Hide all sections
-            var sections = document.querySelectorAll('main section');
-            sections.forEach(function(section) {
-                section.classList.remove('active');
-            });
+    function showContent(sectionId) {
+        // Hide all sections
+        var sections = document.querySelectorAll('main section');
+        sections.forEach(function(section) {
+            section.classList.remove('active');
+        });
 
-            // Show the selected section
-            var selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.classList.add('active');
-            }
+        // Show the selected section
+        var selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.classList.add('active');
+
+            // Trigger animation
+            selectedSection.classList.add('animate');
+            setTimeout(function() {
+                selectedSection.classList.remove('animate');
+            }, 700); // Adjust the duration to match the animation duration
         }
-    </script>
+    }
+</script>
 </body>
 </html>

@@ -1,3 +1,36 @@
-#about p {
-  line-height: 1.5;
+/* Add animation styles */
+@keyframes tracking-in-expand {
+  0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+  }
+  40% {
+      opacity: 0.6;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Apply animation to active sections */
+section.active.animate {
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.2s both;
+}
+
+h3 {
+  padding: 100px;
+}
+
+.project {
+  margin-bottom: 20px; /* Add margin between projects */
+}
+
+.project-info {
+  display: block; /* Display as block element */
+}
+
+.project-info h3,
+.project-info p,
+.project-info a {
+  margin-bottom: 10px; /* Add margin between project info elements */
 }
