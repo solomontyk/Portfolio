@@ -29,10 +29,14 @@ h3 {
 }
 
 .project-info {
-  margin-bottom: 20px; /* Adds space between each project */
+  margin-bottom: 30px; /* Adds space between each project */
+  
 }
 
-
+#contact p {
+  font-size: 18px; /* Adjust the font size as needed */
+  letter-spacing: 1px; /* Adjust the letter spacing as needed */
+}
 .project-info h3,
 .project-info p,
 .project-info a {
